@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<script>
+var number = Math.floor(Math.random() * 1000) + 1;
+var counter = 0;
+
+function onSubmit() {
+    counter = counter + 1;
+    var value = document.getElementById("guess").value;
+
+    if (value > number) {
+        window.alert("Guess lower");
+    } else if (value < number) {
+            window.alert("guess higher");
+    } else {
+            window.alert("you guessed the number in " + counter + " tries");
+    }
+
+    document.getElementById(guess).value = "";
+} 
+</script>
+<body>
+<H1> guess the correct number (maximum number is 1000) </H1>
+<input type="text" id="guess" value="">
+<br><br>
+
+<button onClick='onSubmit()'>Submit</button>
+<br><br><br>
+<p> for prove that I made this Joshua made this</p>
+
+</body>
+</html>
